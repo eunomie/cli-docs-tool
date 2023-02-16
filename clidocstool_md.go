@@ -191,9 +191,6 @@ func mdCmdOutput(cmd *cobra.Command, old string) (string, error) {
 	b := &strings.Builder{}
 
 	desc := cmd.Short
-	if cmd.Long != "" {
-		desc = cmd.Long
-	}
 	if desc != "" {
 		b.WriteString(desc + "\n\n")
 	}
